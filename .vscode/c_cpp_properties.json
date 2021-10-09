@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/wxWidgets/include/**"
+            ],
+            "defines": [
+                "WXUSINGDLL",
+                "_FILE_OFFSET_BITS=64",
+                "__WXGTK__"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "intelliSenseMode": "linux-clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
