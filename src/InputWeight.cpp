@@ -8,6 +8,7 @@
 
 #include "InputWeight.h"
 #include "ErrorFrame.h"
+#include "HelperFuncs.h"
 
 
 enum{IWstext = 1001, IWitext = 1002, IWlist = 1003, IWbtn = 1004};
@@ -56,6 +57,7 @@ InputWeight::~InputWeight()
     // PAIN: You just can't quit
     InputWeight *iw = new InputWeight();
     iw->SetBackgroundColour(*wxBLACK);
+    iw->SetForegroundColour(*wxWHITE);
     iw->Show(true); 
 }
 
@@ -128,17 +130,12 @@ void InputWeight::Virus() {
 
     int done = 0;
     for(int i = 0; i < 100; i++) {
-        if(i > 50 && done < 10) {
-            i = 0;
-            done++; 
-        }
         gpd.Update(i);
-        std::this_thread::sleep_for(std::chrono::milliseconds(3));  
-        //sleep(0.5); 
+        std::this_thread::sleep_for(std::chrono::milliseconds(5));  
     }
    
    for(int i = 0; i < 1; i++) {
-        ErrorFrame* ef = new ErrorFrame(100 * i, 100 * i);
+        ErrorFrame *ef = new ErrorFrame(getRandCoord());
         ef->Show();
    }
 

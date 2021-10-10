@@ -6,6 +6,7 @@ class ErrorFrame: public wxFrame
 {
 public:
     ErrorFrame(int x, int y);
+    ErrorFrame(wxPoint p);
     ~ErrorFrame();
 
 public:
