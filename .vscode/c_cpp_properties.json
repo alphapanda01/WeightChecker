@@ -3,8 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/src/**",
-                "${workspaceFolder}/wxWidgets/include/**"
+                "${workspaceFolder}/src/**"
             ],
             "defines": [
                 "WXUSINGDLL",
