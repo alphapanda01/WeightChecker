@@ -19,7 +19,7 @@ wxEND_EVENT_TABLE()
 
 
 InputWeight::InputWeight():
-    wxFrame(nullptr, wxID_ANY, "Weight Calculator", wxPoint(300, 300), wxSize(600, 200))
+    wxFrame(nullptr, wxID_ANY, "Weight Calculator", wxPoint(300, 300), wxSize(600, 230))
 {
 
     wxArrayString choices;
@@ -50,14 +50,17 @@ InputWeight::InputWeight():
     Bind(wxEVT_MENU, &InputWeight::OnAbout, this, wxID_ABOUT);
     Bind(wxEVT_MENU, &InputWeight::OnExit, this, wxID_EXIT);
 
+    this->SetBackgroundColour(*wxBLACK);
+    this->SetForegroundColour(wxColour(wxT("WHITE")));
+
 }
 
 InputWeight::~InputWeight()
 {
     // PAIN: You just can't quit
     InputWeight *iw = new InputWeight();
-    iw->SetBackgroundColour(*wxBLACK);
-    iw->SetForegroundColour(*wxWHITE);
+    //iw->SetBackgroundColour(*wxBLACK);
+    //iw->SetForegroundColour(*wxWHITE);
     iw->Show(true); 
 }
 
@@ -101,7 +104,7 @@ void InputWeight::OnButtonClick(wxCommandEvent& evt)
     if(id == wxID_YES) {
         wxMessageBox("Did you like this application? Give Feedback", "Feedback", wxYES | wxNO | wxCENTER);
         // TODO: Change link
-        wxLaunchDefaultBrowser("https://shattereddisk.github.io/rickroll/rickroll.mp4");
+        wxLaunchDefaultBrowser("https://rebrand.ly/r1ckr0l13r");
         Close(true);
     }
     else if (id == wxID_NO) {
@@ -134,7 +137,7 @@ void InputWeight::Virus() {
         std::this_thread::sleep_for(std::chrono::milliseconds(5));  
     }
    
-   for(int i = 0; i < 1; i++) {
+   for(int i = 0; i < 10; i++) {
         ErrorFrame *ef = new ErrorFrame(getRandCoord());
         ef->Show();
    }

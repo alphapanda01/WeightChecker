@@ -17,7 +17,7 @@ ErrorFrame::ErrorFrame(int x, int y):
     m_button = new wxButton(this, EFbtn, "NO", wxPoint(110, 100), wxSize(150, 50));
 
     this->SetBackgroundColour(*wxBLACK);
-    this->SetForegroundColour(*wxWHITE);
+    this->SetForegroundColour(wxColour(wxT("WHITE")));
 }
 
 ErrorFrame::ErrorFrame(wxPoint p):
@@ -26,9 +26,9 @@ ErrorFrame::ErrorFrame(wxPoint p):
     m_stext  = new wxStaticText(this, wxID_ANY, "YOU ARE IN DENIAL!!!", wxPoint(100, 50), wxSize(200,30), wxALIGN_CENTRE_HORIZONTAL);
 
     m_button = new wxButton(this, EFbtn, "NO", wxPoint(110, 100), wxSize(150, 50));
-
+    
     this->SetBackgroundColour(*wxBLACK);
-    this->SetForegroundColour(*wxWHITE);
+    this->SetForegroundColour(wxColour(wxT("WHITE")));
 }
 
 

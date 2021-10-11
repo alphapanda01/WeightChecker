@@ -12,7 +12,7 @@ wxPoint getRandCoord()
     int w = wxDisplay().GetGeometry().GetWidth() ;
     int h = wxDisplay().GetGeometry().GetHeight();
 
-    wxPoint p(rand()%h, rand()%w);
+    wxPoint p((rand()+rand())%h, ((rand()*rand())%rand())%w);
 
     return p;
 }
