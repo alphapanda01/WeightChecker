@@ -59,8 +59,6 @@ InputWeight::~InputWeight()
 {
     // PAIN: You just can't quit
     InputWeight *iw = new InputWeight();
-    //iw->SetBackgroundColour(*wxBLACK);
-    //iw->SetForegroundColour(*wxWHITE);
     iw->Show(true); 
 }
 
@@ -118,7 +116,7 @@ void InputWeight::OnButtonClick(wxCommandEvent& evt)
         while(wxMessageBox(m, "FAT!!", wxYES_NO | wxCANCEL, this, wxDefaultCoord, wxDefaultCoord)) {
             // TODO: add some more cool stuff here
             count++;
-            if(count > 5) {
+            if(count > 3) {
                 m = std::string("YOU NEVER HAD AN CHOICE: ") + std::to_string(count);
             }
         }

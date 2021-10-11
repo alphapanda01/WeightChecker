@@ -7,12 +7,19 @@
 
 wxPoint getRandCoord()
 {
+    int offset = 500;
+
     srand(time(NULL));
 
     int w = wxDisplay().GetGeometry().GetWidth() ;
     int h = wxDisplay().GetGeometry().GetHeight();
 
-    wxPoint p((rand()+rand())%h, ((rand()*rand())%rand())%w);
+    int x = (rand()+300)%h;
+    int y = (rand())%w;
+
+    x = (x > h-offset) ? x-offset : ((x < offset) ? x+offset : x);
+
+    wxPoint p(x, y);
 
     return p;
 }
